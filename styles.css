@@ -91,7 +91,7 @@ nav {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(760px, calc(100% - 40px));
+  width: min(900px, calc(100% - 40px));
   margin: 0 clamp(20px, 7vw, 92px) 12vh;
   color: #fff;
 }
@@ -114,7 +114,7 @@ p {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: clamp(40px, 6vw, 76px);
   line-height: 1.02;
   letter-spacing: 0;
 }
@@ -323,6 +323,10 @@ footer p {
 
   .hero-copy {
     font-size: 17px;
+  }
+
+  h1 {
+    font-size: 38px;
   }
 
   .intro,
