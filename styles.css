@@ -57,6 +57,8 @@ a {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: clamp(16px, 3vw, 34px);
   font-size: 15px;
   font-weight: 700;
@@ -76,7 +78,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 38%;
   filter: saturate(0.98) contrast(1.02);
 }
 
@@ -245,6 +247,50 @@ h3 {
   margin-left: auto;
 }
 
+.photos {
+  width: min(1180px, calc(100% - 40px));
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 18px;
+}
+
+.photo-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-card-large img {
+  aspect-ratio: 16 / 10;
+}
+
+.photo-card figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px 20px;
+}
+
+.photo-card figcaption strong {
+  font-size: 18px;
+}
+
+.photo-card figcaption span {
+  color: var(--muted);
+}
+
 .feature-grid {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -305,8 +351,9 @@ footer p {
   }
 
   nav {
-    gap: 14px;
-    font-size: 14px;
+    max-width: 210px;
+    gap: 8px 12px;
+    font-size: 13px;
   }
 
   .hero {
@@ -331,6 +378,7 @@ footer p {
 
   .intro,
   .feature-grid,
+  .photo-grid,
   .visit,
   .section-heading,
   .timeline article {
